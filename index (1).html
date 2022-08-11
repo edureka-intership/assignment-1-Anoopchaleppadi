@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment1</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        .firstHeading {
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Navigation bar -->
+    <nav class="container-fluid navbar">
+        <a href="#" class="navbar-brand"><p>e!</p></a>
+
+        <button style="visibility: hidden;" class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+        <div class="d-flex">            
+            <a href="#">Log In</a>
+            <button class="btn btn-outline-light" type="submit">Create an account</button>
+        </div>
+    </nav>
+
+    <!-- FIRST SECTION - (Heaading of the page) -->
+   <section class="container firstHeading">
+        <h1>Breakfast Places in Mumbai</h1>
+   </section>
+
+   <!-- SECOND SECTION - (Filter section and product card) -->
+   <section class="container thirdContainer">
+
+        <div class="row dropdown">
+            <div class="col-12">
+                <h3>Filter / Sort <span>&#94;</span></h3>
+            </div>
+        </div>
+
+        <div class="row" style="margin-bottom: 40px;">
+            <!-- Filter Column -->
+            <div class="col-3 leftColumn">
+                <h4>Filter</h4>
+                <p>Select Location</p>
+                <div class="selectLocation">
+                    <input class="form-control" list="datalistOptions" id="exampleDataList" placeholder="Select Location">
+                    <datalist id="datalistOptions">
+                        <option value="San Francisco">
+                        <option value="New York">
+                        <option value="Seattle">
+                        <option value="Los Angeles">
+                        <option value="Chicago">
+                    </datalist>
+                </div>  
+                
+                <p>Cuisine</p>
+                <div class="cuisine">    
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="South Indian" id="southIndian">
+                        <label class="form-check-label" for="southIndian">
+                        South Indian
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="North Indian" id="northIndian" checked>
+                        <label class="form-check-label" for="northIndian">
+                        North Indian
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Chinese" id="chinese" checked>
+                        <label class="form-check-label" for="chinese">
+                        Chinese
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="fastFood" id="Fast Food">
+                        <label class="form-check-label" for="fastFood">
+                        Fast Food
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="Street Food" id="streetFood">
+                        <label class="form-check-label" for="streetFood">
+                        Street Food
+                        </label>
+                    </div>
+                </div>
+
+                <p>Cost For Two</p>
+                <div class="costForTwo">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Less than 500
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          500 to 1000
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          1000 to 1500
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          1500 to 2000
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          2000+
+                        </label>
+                    </div>
+    
+                </div>
+                
+                <p class="sort">Sort</p>
+                <div class="sortBlock">
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Price low to high
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                        Price high to low
+                        </label>
+                    </div>
+                </div>    
+
+            </div>
+
+            <!-- Product Card column-->
+            <div class="col-8 rightColumn" style="position: relative;">
+
+                <div class="row rightColRow">                    
+                    <div class="row rowOne">
+                        <div class="col-3 columnOne">
+                            <img src="../image/shutterstock_1154073754.png" alt="">
+                        </div>
+                        <div class="col-9 columnTwo">
+                            <h3>The Big Chill Cakery</h3>
+                            <h6>FORT</h6>
+                            <p>Shop 1, Plot D, Samaruddhi Complex, Chincholi</p>
+                        </div> 
+                    </div>
+                    <hr>
+                    <div class="row rowTwo">
+                        <div class="col-3 columnOne">
+                            <p>CUISINE:</p>
+                            <p class="costForTwo">COST FOR TWO:</p>
+                        </div>
+                        <div class="col-9 columnTwo">
+                            <p>Bakery</p>
+                            <p>₹700</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row rightColRow">
+                    <div class="row rowOne">
+                        <div class="col-3 columnOne">
+                            <img src="../image/shutterstock_1154073754.png" alt="">
+                        </div>
+                        <div class="col-9 columnTwo">
+                            <h3>The Big Chill Cakery</h3>
+                            <h6>FORT</h6>
+                            <p>Shop 1, Plot D, Samaruddhi Complex, Chincholi</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row rowTwo">
+                        <div class="col-3 columnOne">
+                            <p>CUISINE:</p>
+                            <p class="costForTwo">COST FOR TWO:</p>
+                        </div>
+                        <div class="col-9 columnTwo">
+                            <p>Bakery</p>
+                            <p>₹700</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row rightColRow viewAtSm">
+                    <div class="row rowOne">
+                        <div class="col-3 columnOne">
+                            <img src="../image/shutterstock_1154073754.png" alt="">
+                        </div>
+                        <div class="col-9 columnTwo">
+                            <h3>The Big Chill Cakery</h3>
+                            <h6>FORT</h6>
+                            <p>Shop 1, Plot D, Samaruddhi Complex, Chincholi</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row rowTwo">
+                        <div class="col-3 columnOne">
+                            <p>CUISINE:</p>
+                            <p class="costForTwo">COST FOR TWO:</p>
+                        </div>
+                        <div class="col-9 columnTwo">
+                            <p>Bakery</p>
+                            <p>₹700</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pegination -->
+                <div class="row rightCol3Row">
+                    <div class="col-12" style="position: absolute; bottom: 0;">
+                        <ul class="pagination">
+                            <li class="page-item" style="margin-left: 0;">
+                                <a class="page-link" href="#" aria-label="Previous"  style="border-radius: 10px;">
+                                  <span aria-hidden="true">&#60;</span>
+                                </a>
+                            </li>
+                            <li class="page-item active" aria-current="page">
+                                <span class="page-link bg-secndary" style="padding: 3px;">1</span>
+                              </li>
+                            <li class="page-item"><a class="page-link" href="#">2</a></li>
+                            <li class="page-item"><a class="page-link" href="#">3</a></li>
+                            <li class="page-item"><a class="page-link" href="#">4</a></li>
+                            <li class="page-item"><a class="page-link" href="#">5</a></li>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next" style="border-radius: 10px;">
+                                    <span aria-hidden="true">&#62;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+   </section>
+    
+</body>
+</html>
